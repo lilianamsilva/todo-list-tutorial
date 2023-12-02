@@ -44,18 +44,18 @@
                         <p>Which main comedy character would you choose to be?</p>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="q2a1" name="q2" class="custom-control-input" value="Dog">
-                            <label class="custom-control-label" for="q2a1">Buddy: Elf</label>
-                            <img class="image" src="./buddy.jpeg" alt="Comedy Image" width='100px'>
+                            <label class="custom-control-label" for="q2a1">Ted: Ted</label>
+                            <img class="image" src="./Ted.jpeg" alt="Comedy Image" width='100px'>
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="q2a2" name="q2" class="custom-control-input" value="Cat">
-                            <label class="custom-control-label" for="q2a2">Cher Horowitz: Clueless</label>
-                            <img class="image" src="./cher.jpeg" alt="Comedy Image" width='100px'>
+                            <label class="custom-control-label" for="q2a2">Buddy: Elf</label>
+                            <img class="image" src="./buddy.jpeg" alt="Comedy Image" width='100px'>
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="q2a3" name="q2" class="custom-control-input" value="Bird">
-                            <label class="custom-control-label" for="q2a3">Ted: Ted</label>
-                            <img class="image" src="./Ted.jpeg" alt="Comedy Image" width='100px'>
+                            <label class="custom-control-label" for="q2a3">Cher Horowitz: Clueless</label>
+                            <img class="image" src="./cher.jpeg" alt="Comedy Image" width='100px'>
                         </div>
                     </div>
 
@@ -65,8 +65,8 @@
                         <p>Which movie would best protray your appearance/style?</p>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="q3a1" name="q3" class="custom-control-input" value="Summer">
-                            <label class="custom-control-label" for="q3a1">Mean Girls</label>
-                            <img class="image" src="./mean girls.webp" alt="Comedy Image" width='100px'>
+                            <label class="custom-control-label" for="q3a1">Zoolander</label>
+                            <img class="image" src="./zoolander.jpeg" alt="Comedy Image" width='100px'>
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="q3a2" name="q3" class="custom-control-input" value="Winter">
@@ -75,8 +75,8 @@
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="q3a3" name="q3" class="custom-control-input" value="Spring">
-                            <label class="custom-control-label" for="q3a3">Zoolander</label>
-                            <img class="image" src="./zoolander.jpeg" alt="Comedy Image" width='100px'>
+                            <label class="custom-control-label" for="q3a3">Mean Girls</label>
+                            <img class="image" src="./mean girls.webp" alt="Comedy Image" width='100px'>
                         </div>
                     </div>
                     <!-- Submit Button -->
@@ -100,8 +100,12 @@
                 destinationPage = "<h1>Result 1</h1><p>This is the result for the first set of answers.</p>";
             } else if (q1Answer.value === "Blue" && q2Answer.value === "Cat" && q3Answer.value === "Winter") {
                 destinationPage = "<h1>Result 2</h1><p>This is the result for the second set of answers.</p>";
-            } else {
-                destinationPage = "<h1>Result 3</h1><p>This is the result for other combinations of answers.</p>";
+            } 
+            else if (q1Answer.value === "Green" && q2Answer.value === "Bird" && q3Answer.value === "Spring") {
+                destinationPage = "<h1>Result 3</h1><p>This is the result for the Third set of answers.</p>";
+            } 
+            else {
+                destinationPage = "<h1>Result 4</h1><p>This is the result for other combinations of answers.</p>";
             }
 
             // Display the result on the current page
