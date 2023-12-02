@@ -33,8 +33,8 @@
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="q1a3" name="q1" class="custom-control-input" value="Green">
-                            <label class="custom-control-label" for="q1a3">Scary Movie</label>
-                            <img class="image" src="./scarymovie.jpg" alt="Comedy Image" width='100px'>
+                            <label class="custom-control-label" for="q1a3">No Hard Feelings</label>
+                            <img class="image" src="./no hard feelings.jpeg" alt="Comedy Image" width='100px'>
                         </div>
                     </div>
 
@@ -97,15 +97,15 @@
             // Determine destination based on answers
             let destinationPage = "";
             if (q1Answer.value === "Red" && q2Answer.value === "Dog" && q3Answer.value === "Summer") {
-                destinationPage = "<h1>Result 1</h1><p>This is the result for the first set of answers.</p>";
+                destinationPage = "<h1>You match with: Raunchy Comedy Movies</h1><p>You prefer movies with bold humor. You tend to challenge social norms and be unapologetically blunt. Nevertheless, you have an adventurous side and you are outgoing/social. </p>";
             } else if (q1Answer.value === "Blue" && q2Answer.value === "Cat" && q3Answer.value === "Winter") {
-                destinationPage = "<h1>Result 2</h1><p>This is the result for the second set of answers.</p>";
+                destinationPage = "<h1>You match with: Family Comdey</h1><p>You prefer movies that cater to a wide audience. You tend to be lighthearted and prioritize family and friend's needs. You hold values such as love, kindness, and creating a welcoming enviornment. </p>";
             } 
             else if (q1Answer.value === "Green" && q2Answer.value === "Bird" && q3Answer.value === "Spring") {
-                destinationPage = "<h1>Result 3</h1><p>This is the result for the Third set of answers.</p>";
+                destinationPage = "<h1>You match with: Rom Comedy</h1><p>You prefer movies the incorporate love and humor. You tend to be charming and look at things in a positive light. You are waiting for your happy ending.</p>";
             } 
             else {
-                destinationPage = "<h1>Result 4</h1><p>This is the result for other combinations of answers.</p>";
+                destinationPage = "<h1>You match with: Anything Comedy</h1><p>You prefer movies with various genres and styles. You tend to be clever, well-rounded, and have a good sense of humor.</p>";
             }
 
             // Display the result on the current page
