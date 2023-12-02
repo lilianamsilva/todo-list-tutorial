@@ -3,9 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thriller Genre</title>
+    <title>Personality Quiz - Marvel</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body style="background-color:rgb(130, 70, 226)">
-    <h1>Top Movies</h1>
+<body>
+    <!-- Header Section -->
+    <header class="bg-dark text-white text-center p-4">
+        <h1>Personality Quiz - Top Thriller Movies</h1>
+    </header>
+      <!-- Quiz Section -->
+      <section id="quiz" class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="quizForm">
+                    <!-- Question 1 -->
+                    <div class="form-group">
+                        <h4>Question 1:</h4>
+                        <p>Which Thriller Movie best resonates with your personality?</p>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="q1a1" name="q1" class="custom-control-input" value="Red">
+                            <label class="custom-control-label" for="q1a1">No Hard Feelings</label>
+                            <img class="image" src="./Thrillerimage.jpeg" alt="Comedy Image" width='100px'>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="q1a2" name="q1" class="custom-control-input" value="Blue">
+                            <label class="custom-control-label" for="q1a2">Joy Ride</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="q1a3" name="q1" class="custom-control-input" value="Green">
+                            <label class="custom-control-label" for="q1a3">Barbie</label>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="form-group">
+                        <h4>Question 2:</h4>
+                        <p>Which main thriller character would you choose?</p>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="q2a1" name="q2" class="custom-control-input" value="Dog">
+                            <label class="custom-control-label" for="q2a1">Flight</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="q2a2" name="q2" class="custom-control-input" value="Cat">
+                            <label class="custom-control-label" for="q2a2">Super Strength</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="q2a3" name="q2" class="custom-control-input" value="Bird">
+                            <label class="custom-control-label" for="q2a3">Invisibility</label>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="form-group">
+                        <h4>Question 3:</h4>
+                        <p>How would you dress?</p>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="q3a1" name="q3" class="custom-control-input" value="Summer">
+                            <label class="custom-control-label" for="q3a1">Avengers: Endgame</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="q3a2" name="q3" class="custom-control-input" value="Winter">
+                            <label class="custom-control-label" for="q3a2">Black Panther</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="q3a3" name="q3" class="custom-control-input" value="Spring">
+                            <label class="custom-control-label" for="q3a3">Guardians of the Galaxy</label>
+                        </div>
+                    </div>
+                    <!-- Submit Button -->
+                    <button type="submit" onclick="submitQuiz()">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+        function submitQuiz() {
+            // Get selected answers
+            const q1Answer = document.querySelector('input[name="q1"]:checked');
+            const q2Answer = document.querySelector('input[name="q2"]:checked');
+            const q3Answer = document.querySelector('input[name="q3"]:checked');
+
+            // Check if all questions are answered
+            if (q1Answer && q2Answer && q3Answer) {
+            // Determine destination based on answers
+            let destinationPage = "";
+            if (q1Answer.value === "Red" && q2Answer.value === "Dog" && q3Answer.value === "Summer") {
+                destinationPage = "<h1>Result 1</h1><p>This is the result for the first set of answers.</p>";
+            } else if (q1Answer.value === "Blue" && q2Answer.value === "Cat" && q3Answer.value === "Winter") {
+                destinationPage = "<h1>Result 2</h1><p>This is the result for the second set of answers.</p>";
+            } else {
+                destinationPage = "<h1>Result 3</h1><p>This is the result for other combinations of answers.</p>";
+            }
+
+            // Display the result on the current page
+            document.body.innerHTML = destinationPage;
+        } else {
+            // Display an alert if not all questions are answered
+            alert("Please answer all questions before submitting.");
+        }
+    }
+</script>
+
 </body>
 </html>
