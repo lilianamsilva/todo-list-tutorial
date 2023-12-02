@@ -11,12 +11,35 @@
             h2 {
                 text-align: center;
             }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items; flex-end;
+            }
+            .image {
+                max-width: 100%
+                height: auto;
+            }
+            .title {
+                font-size: 2em;
+                margin-top: 10px;
+            }
         </style>
     </head>
     <body>
         <h1>What Type of Movie are You?</h1>
         <h2>Pick your prefered genre</h2>
-        <a href="./Comedy/comedy.html">Comedy</a>
+        <div> class='container'>
+            <img class="image" src="./download.jpeg" alt="Comedy Picture">
+            <h1><a href="./Comedy/comedy.html">Comedy</a></h1>
+        </div>
         <p><a href="./Thriller/thriller.html">Thriller</a></p>
         <p><a href="./Horror/horror.html">Horror</a></p>
         <p><a href="./Romance/romance.html">Romance</a></p>
